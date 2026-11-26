@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.ts",
-    "dev": "node --watch src/server.ts",
+    "start": "node --env-file-if-exists=.env src/server.ts",
+    "dev": "node --env-file=.env --watch src/server.ts",
     "typecheck": "tsc"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "mongoose": "^9.13.1"
   }
 }
