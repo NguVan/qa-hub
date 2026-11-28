@@ -1,5 +1,8 @@
-export type Status = "New" | "Pass" | "Fail" | "Blocked";
-export type Priority = "High" | "Medium" | "Low";
+export const STATUSES = ["New", "Pass", "Fail", "Blocked"] as const;
+export const PRIORITIES = ["High", "Medium", "Low"] as const;
+
+export type Status = (typeof STATUSES)[number];
+export type Priority = (typeof PRIORITIES)[number];
 
 export interface TestCase {
   id: number;
